@@ -1,0 +1,17 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
+body{background:#000;color:#fff;overflow-x:hidden;}
+.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url('background.jpg') center/cover no-repeat;display:flex;justify-content:center;align-items:center;text-align:center;position:relative;}
+.hero::before{content:'';position:absolute;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);animation:shine 8s linear infinite;}
+.container{position:relative;z-index:2;animation:fadeUp 1.4s;}
+.profile{width:220px;height:220px;border-radius:50%;object-fit:cover;border:5px solid #00ffd5;box-shadow:0 0 35px #00ffd5;animation:float 4s ease-in-out infinite;}
+h1{margin-top:20px;font-size:58px;color:#00ffd5;text-shadow:0 0 20px cyan;}
+.subtitle{font-size:22px;margin:15px 0 30px;color:#eee;}
+.button{display:inline-block;padding:15px 45px;background:#00ffd5;color:#000;text-decoration:none;font-weight:bold;border-radius:50px;transition:.4s;}
+.button:hover{transform:scale(1.08);box-shadow:0 0 25px cyan;}
+section{padding:90px 25px;background:#111;}
+.card{max-width:900px;margin:auto;padding:40px;background:rgba(255,255,255,.08);backdrop-filter:blur(12px);border-radius:20px;box-shadow:0 0 20px rgba(0,255,213,.25);}
+footer{background:#000;padding:30px;text-align:center;color:#aaa;}
+@keyframes fadeUp{0%{opacity:0;transform:translateY(60px);}100%{opacity:1;transform:translateY(0);}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+@keyframes shine{0%{transform:translateX(-100%);}100%{transform:translateX(100%);}}
+@media(max-width:768px){.profile{width:170px;height:170px;}h1{font-size:42px;}.subtitle{font-size:18px;}.button{padding:13px 35px;}}
